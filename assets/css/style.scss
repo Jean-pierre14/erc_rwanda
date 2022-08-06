@@ -60,6 +60,70 @@ nav {
 }
 
 .wrapper {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.box {
+    background: var(--White);
+    border-radius: var(--Raduis);
+    padding: 10px;
+    form {
+        .error-text {
+            padding: 8px;
+            text-align: center;
+            border-radius: var(--Raduis);
+            color: var(--color--red);
+            background-color: var(--danger);
+            border: 1px solid var(--dangerStrong);
+        }
+        .group {
+            display: block;
+            margin: 5px 0 10px 0;
+            label {
+                cursor: pointer;
+                display: block;
+            }
+            textarea,
+            .input {
+                width: 100%;
+                padding: 10px;
+                outline: none;
+                border: 1px solid var(--grey);
+                border-radius: var(--Raduis);
+            }
+            textarea {
+                font-family: var(--fontFamily);
+                font-weight: 100;
+                line-height: 1;
+            }
+            input[type="file"] {
+                outline: none;
+                border: none;
+            }
+            button {
+                padding: 8px 20px;
+                outline: none;
+                border: 1px solid var(--grey);
+                border-radius: var(--Raduis);
+            }
+        }
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    color: var(--White);
+    background-color: var(--black);
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+.wrapper {
     position: relative;
     max-width: 1440px;
     padding: 10px;
@@ -68,52 +132,6 @@ nav {
             width: 90%;
             padding: 15px;
             margin: 10px auto;
-            .box {
-                background: var(--White);
-                border-radius: var(--Raduis);
-                padding: 10px;
-                form {
-                    .error-text {
-                        padding: 8px;
-                        text-align: center;
-                        border-radius: var(--Raduis);
-                        color: var(--color--red);
-                        background-color: var(--danger);
-                        border: 1px solid var(--dangerStrong);
-                    }
-                    .group {
-                        display: block;
-                        margin: 5px 0 10px 0;
-                        label {
-                            cursor: pointer;
-                            display: block;
-                        }
-                        textarea,
-                        .input {
-                            width: 100%;
-                            padding: 10px;
-                            outline: none;
-                            border: 1px solid var(--grey);
-                            border-radius: var(--Raduis);
-                        }
-                        textarea {
-                            font-family: var(--fontFamily);
-                            font-weight: 100;
-                            line-height: 1;
-                        }
-                        input[type="file"] {
-                            outline: none;
-                            border: none;
-                        }
-                        button {
-                            padding: 8px 20px;
-                            outline: none;
-                            border: 1px solid var(--grey);
-                            border-radius: var(--Raduis);
-                        }
-                    }
-                }
-            }
         }
     }
 }

@@ -61,6 +61,68 @@ nav .links ul li a {
 }
 
 .wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.box {
+  background: var(--White);
+  border-radius: var(--Raduis);
+  padding: 10px;
+}
+.box form .error-text {
+  padding: 8px;
+  text-align: center;
+  border-radius: var(--Raduis);
+  color: var(--color--red);
+  background-color: var(--danger);
+  border: 1px solid var(--dangerStrong);
+}
+.box form .group {
+  display: block;
+  margin: 5px 0 10px 0;
+}
+.box form .group label {
+  cursor: pointer;
+  display: block;
+}
+.box form .group textarea,
+.box form .group .input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid var(--grey);
+  border-radius: var(--Raduis);
+}
+.box form .group textarea {
+  font-family: var(--fontFamily);
+  font-weight: 100;
+  line-height: 1;
+}
+.box form .group input[type=file] {
+  outline: none;
+  border: none;
+}
+.box form .group button {
+  padding: 8px 20px;
+  outline: none;
+  border: 1px solid var(--grey);
+  border-radius: var(--Raduis);
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  color: var(--White);
+  background-color: var(--black);
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.wrapper {
   position: relative;
   max-width: 1440px;
   padding: 10px;
@@ -70,49 +132,5 @@ nav .links ul li a {
     width: 90%;
     padding: 15px;
     margin: 10px auto;
-  }
-  .wrapper .box {
-    background: var(--White);
-    border-radius: var(--Raduis);
-    padding: 10px;
-  }
-  .wrapper .box form .error-text {
-    padding: 8px;
-    text-align: center;
-    border-radius: var(--Raduis);
-    color: var(--color--red);
-    background-color: var(--danger);
-    border: 1px solid var(--dangerStrong);
-  }
-  .wrapper .box form .group {
-    display: block;
-    margin: 5px 0 10px 0;
-  }
-  .wrapper .box form .group label {
-    cursor: pointer;
-    display: block;
-  }
-  .wrapper .box form .group textarea,
-.wrapper .box form .group .input {
-    width: 100%;
-    padding: 10px;
-    outline: none;
-    border: 1px solid var(--grey);
-    border-radius: var(--Raduis);
-  }
-  .wrapper .box form .group textarea {
-    font-family: var(--fontFamily);
-    font-weight: 100;
-    line-height: 1;
-  }
-  .wrapper .box form .group input[type=file] {
-    outline: none;
-    border: none;
-  }
-  .wrapper .box form .group button {
-    padding: 8px 20px;
-    outline: none;
-    border: 1px solid var(--grey);
-    border-radius: var(--Raduis);
   }
 }/*# sourceMappingURL=style.css.map */
