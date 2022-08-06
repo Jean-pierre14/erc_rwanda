@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fontfamily: "poppins", sans-serif;
+    --fontSize: 15px;
+    --fontWeightBig: 600;
+    --fontWeightMd: 500;
+    --fontWeightSmall: 400;
+    --Raduis: .4rem;
+    --lightBlue: rgba(104, 205, 252, 0.4);
+    --White: #fff;
+    --grey: #ccc;
+    --black: #000;
+    --color--red: rgb(219, 0, 0);
+    --danger: rgba(254, 105, 105, 0.601);
+    --dangerStrong: rgb(253, 75, 75);
+}
+
+body {
+    font-family: var(--fontFamily);
+    background-color: var(--lightBlue);
+}
+
+nav {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--black);
+    color: var(--White);
+    .logo {
+        a {
+            color: var(--White);
+            text-decoration: none;
+        }
+    }
+    .links {
+        user-select: none;
+        ul {
+            list-style: none;
+            li {
+                display: inline-block;
+                a {
+                    padding: 10px;
+                    color: var(--White);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.wrapper {
+    position: relative;
+    max-width: 1440px;
+    padding: 10px;
+    @media (max-width: 768px) {
+        & {
+            width: 90%;
+            padding: 15px;
+            margin: 10px auto;
+            .box {
+                background: var(--White);
+                border-radius: var(--Raduis);
+                padding: 10px;
+                form {
+                    .error-text {
+                        padding: 8px;
+                        text-align: center;
+                        border-radius: var(--Raduis);
+                        color: var(--color--red);
+                        background-color: var(--danger);
+                        border: 1px solid var(--dangerStrong);
+                    }
+                    .group {
+                        display: block;
+                        margin: 5px 0 10px 0;
+                        label {
+                            cursor: pointer;
+                            display: block;
+                        }
+                        textarea,
+                        .input {
+                            width: 100%;
+                            padding: 10px;
+                            outline: none;
+                            border: 1px solid var(--grey);
+                            border-radius: var(--Raduis);
+                        }
+                        textarea {
+                            font-family: var(--fontFamily);
+                            font-weight: 100;
+                            line-height: 1;
+                        }
+                        input[type="file"] {
+                            outline: none;
+                            border: none;
+                        }
+                        button {
+                            padding: 8px 20px;
+                            outline: none;
+                            border: 1px solid var(--grey);
+                            border-radius: var(--Raduis);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
