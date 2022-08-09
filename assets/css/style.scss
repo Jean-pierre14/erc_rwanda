@@ -15,6 +15,7 @@
     --Raduis: .4rem;
     --lightBlue: rgba(104, 205, 252, 0.4);
     --White: #fff;
+    --primary: rgb(43, 144, 245);
     --grey: #ccc;
     --black: #000;
     --color--red: rgb(219, 0, 0);
@@ -22,9 +23,71 @@
     --dangerStrong: rgb(253, 75, 75);
 }
 
+.img-max {
+    position: relative;
+    width: 100%;
+}
+
+.profil {
+    width: 42px;
+    height: 42px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.flex {
+    display: flex;
+    &.justify-content-between {
+        justify-content: space-between;
+    }
+}
+
+.btn {
+    padding: 8px 15px;
+    cursor: pointer;
+    border: 1px solid var(--grey);
+    border-radius: var(--Raduis);
+    background-color: var(--grey);
+    transition: all .3s ease;
+    &.btn-primary {
+        background-color: var(--primary);
+        color: var(--White);
+    }
+    &.btn-block {
+        display: block;
+        width: 95%;
+        margin: auto;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+        opacity: .6;
+    }
+}
+
 body {
     font-family: var(--fontFamily);
     background-color: var(--lightBlue);
+    user-select: none;
+}
+
+.special {
+    header,
+    section {
+        position: relative;
+        padding: 10px 20px;
+        p {
+            border-bottom: 1px solid var(--grey);
+            padding: 20px 0;
+            user-select: text;
+            &:last-child {
+                border: none;
+            }
+        }
+    }
+    button {
+        margin: 10px 20px;
+    }
 }
 
 nav {
@@ -59,12 +122,78 @@ nav {
     }
 }
 
+.subscribes-list {
+    position: relative;
+    ul {
+        list-style: none;
+        li {
+            cursor: pointer;
+            width: 100%;
+            padding: 10px 0 20px 0;
+            border-bottom: 1px solid var(--grey);
+            &:last-child {
+                border: none
+            }
+        }
+    }
+}
+
 .wrapper {
     width: 60%;
     margin: 0 auto;
 }
 
 .box {
+    margin: 20px auto;
+    .card {
+        position: relative;
+        margin: 10px auto;
+        width: 98%;
+        .cardHeader {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            .img-max {
+                object-fit: cover;
+                width: 100%;
+                max-height: 350px;
+                border-radius: .4rem;
+                &:focus {
+                    height: auto;
+                }
+            }
+        }
+        .cardBody {
+            position: relative;
+            margin: 20px auto;
+            h2 {
+                opacity: 70%;
+                color: var(--black);
+            }
+            p {
+                word-wrap: break-word;
+                user-select: none;
+                font-weight: var(--fontWeightSmall);
+            }
+        }
+        .cardFooter {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            img {
+                width: 42px;
+                height: 42px;
+                object-fit: cover;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+    }
+    h3 {
+        text-align: center;
+        font-weight: var(--fontWeightBig);
+        margin: 0 0 10px 0;
+    }
     background: var(--White);
     border-radius: var(--Raduis);
     padding: 10px;
@@ -111,8 +240,12 @@ nav {
     }
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
 .footer {
-    position: absolute;
+    user-select: none;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -120,10 +253,33 @@ nav {
     color: var(--White);
     background-color: var(--black);
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: repeat(3, 1fr);
+    .abonnement {
+        label {
+            display: block;
+            margin: 0px 0px 10px 0;
+        }
+        input {
+            padding: 10px;
+            width: 100%;
+            outline: none;
+            border: 1px solid var(--grey);
+            border-radius: var(--Raduis) var(--Raduis) 0 0;
+        }
+        button {
+            cursor: pointer;
+            padding: 5px 20px;
+            border: 1px solid var(--grey);
+            border-radius: 0 0 var(--Raduis) var(--Raduis);
+        }
+    }
+    ul {
+        list-style: none;
+    }
 }
 
 .wrapper {
+    user-select: none;
     position: relative;
     max-width: 1440px;
     padding: 10px;
