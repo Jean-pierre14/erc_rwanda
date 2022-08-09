@@ -169,7 +169,7 @@ nav .links ul li a {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  max-height: 350px;
+  max-height: 450px;
   border-radius: 0.4rem;
 }
 .box .card .cardHeader .img-max:focus {
@@ -258,10 +258,8 @@ nav .links ul li a {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  padding: 10px;
+  padding: 100px 10px;
   color: var(--White);
   background-color: var(--black);
   display: grid;
@@ -286,6 +284,18 @@ nav .links ul li a {
 }
 .footer ul {
   list-style: none;
+}
+@media (max-width: 768px) {
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+  }
+  .footer input,
+.footer button {
+    width: 90%;
+  }
 }
 
 .wrapper {
