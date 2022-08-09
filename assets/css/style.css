@@ -15,6 +15,7 @@
   --Raduis: .4rem;
   --lightBlue: rgba(104, 205, 252, 0.4);
   --White: #fff;
+  --primary: rgb(43, 144, 245);
   --grey: #ccc;
   --black: #000;
   --color--red: rgb(219, 0, 0);
@@ -22,9 +23,76 @@
   --dangerStrong: rgb(253, 75, 75);
 }
 
+.img-max {
+  position: relative;
+  width: 100%;
+}
+
+.profil {
+  width: 42px;
+  height: 42px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.flex {
+  display: flex;
+}
+.flex.justify-content-between {
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 8px 15px;
+  cursor: pointer;
+  border: 1px solid var(--grey);
+  border-radius: var(--Raduis);
+  background-color: var(--grey);
+  transition: all 0.3s ease;
+}
+.btn.btn-primary {
+  background-color: var(--primary);
+  color: var(--White);
+}
+.btn.btn-block {
+  display: block;
+  width: 95%;
+  margin: auto;
+}
+.btn:hover, .btn:focus, .btn:active {
+  opacity: 0.6;
+}
+
 body {
   font-family: var(--fontFamily);
   background-color: var(--lightBlue);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.special header,
+.special section {
+  position: relative;
+  padding: 10px 20px;
+}
+.special header p,
+.special section p {
+  border-bottom: 1px solid var(--grey);
+  padding: 20px 0;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
+}
+.special header p:last-child,
+.special section p:last-child {
+  border: none;
+}
+.special button {
+  margin: 10px 20px;
 }
 
 nav {
@@ -60,15 +128,86 @@ nav .links ul li a {
   text-decoration: none;
 }
 
+.subscribes-list {
+  position: relative;
+}
+.subscribes-list ul {
+  list-style: none;
+}
+.subscribes-list ul li {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 0 20px 0;
+  border-bottom: 1px solid var(--grey);
+}
+.subscribes-list ul li:last-child {
+  border: none;
+}
+
 .wrapper {
   width: 60%;
   margin: 0 auto;
 }
 
 .box {
+  margin: 20px auto;
   background: var(--White);
   border-radius: var(--Raduis);
   padding: 10px;
+}
+.box .card {
+  position: relative;
+  margin: 10px auto;
+  width: 98%;
+}
+.box .card .cardHeader {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+.box .card .cardHeader .img-max {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 350px;
+  border-radius: 0.4rem;
+}
+.box .card .cardHeader .img-max:focus {
+  height: auto;
+}
+.box .card .cardBody {
+  position: relative;
+  margin: 20px auto;
+}
+.box .card .cardBody h2 {
+  opacity: 70%;
+  color: var(--black);
+}
+.box .card .cardBody p {
+  word-wrap: break-word;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-weight: var(--fontWeightSmall);
+}
+.box .card .cardFooter {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.box .card .cardFooter img {
+  width: 42px;
+  height: 42px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.box h3 {
+  text-align: center;
+  font-weight: var(--fontWeightBig);
+  margin: 0 0 10px 0;
 }
 .box form .error-text {
   padding: 8px;
@@ -110,8 +249,15 @@ nav .links ul li a {
   border-radius: var(--Raduis);
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
 .footer {
-  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -119,10 +265,34 @@ nav .links ul li a {
   color: var(--White);
   background-color: var(--black);
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer .abonnement label {
+  display: block;
+  margin: 0px 0px 10px 0;
+}
+.footer .abonnement input {
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--grey);
+  border-radius: var(--Raduis) var(--Raduis) 0 0;
+}
+.footer .abonnement button {
+  cursor: pointer;
+  padding: 5px 20px;
+  border: 1px solid var(--grey);
+  border-radius: 0 0 var(--Raduis) var(--Raduis);
+}
+.footer ul {
+  list-style: none;
 }
 
 .wrapper {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   position: relative;
   max-width: 1440px;
   padding: 10px;
