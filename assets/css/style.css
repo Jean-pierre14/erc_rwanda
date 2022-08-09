@@ -43,17 +43,35 @@
   justify-content: space-between;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .btn {
   padding: 8px 15px;
+  text-decoration: none;
   cursor: pointer;
   border: 1px solid var(--grey);
   border-radius: var(--Raduis);
   background-color: var(--grey);
   transition: all 0.3s ease;
 }
+.btn.btn-link {
+  background-color: transparent;
+  outline: none !important;
+  border: none !important;
+  color: var(--White);
+  font-weight: var(--fontWeightBig);
+}
 .btn.btn-primary {
   background-color: var(--primary);
   color: var(--White);
+  border: none;
+}
+.btn.btn-danger {
+  background-color: var(--dangerStrong);
+  color: var(--White);
+  border: none;
 }
 .btn.btn-block {
   display: block;
@@ -73,6 +91,37 @@ body {
           user-select: none;
 }
 
+.group {
+  margin: 10px auto;
+  display: block;
+}
+.group label {
+  display: block;
+  margin: 0 0 10px 0;
+}
+.group .input {
+  padding: 10px;
+  outline: none;
+  border: 1px solid var(--grey);
+  border-radius: var(--Raduis);
+  width: 100%;
+}
+
+.login {
+  width: 70%;
+  margin: 200px auto;
+  border-radius: var(--Raduis);
+  background-color: var(--White);
+  padding: 20px;
+  box-shadow: 0 10px 10px 0 rgba(49, 49, 49, 0.292), 0 30px 100px 0 rgba(71, 71, 71, 0.4);
+}
+@media (max-width: 768px) {
+  .login {
+    width: 80%;
+    margin: 20px auto;
+  }
+}
+
 .special header,
 .special section {
   position: relative;
@@ -86,6 +135,7 @@ body {
      -moz-user-select: text;
       -ms-user-select: text;
           user-select: text;
+  font-size: 20px;
 }
 .special header p:last-child,
 .special section p:last-child {
@@ -149,6 +199,16 @@ nav .links ul li a {
   margin: 0 auto;
 }
 
+.error-text {
+  padding: 8px;
+  margin: 10px auto;
+  text-align: center;
+  border-radius: var(--Raduis);
+  color: var(--color--red);
+  background-color: var(--danger);
+  border: 1px solid var(--dangerStrong);
+}
+
 .box {
   margin: 20px auto;
   background: var(--White);
@@ -208,14 +268,6 @@ nav .links ul li a {
   text-align: center;
   font-weight: var(--fontWeightBig);
   margin: 0 0 10px 0;
-}
-.box form .error-text {
-  padding: 8px;
-  text-align: center;
-  border-radius: var(--Raduis);
-  color: var(--color--red);
-  background-color: var(--danger);
-  border: 1px solid var(--dangerStrong);
 }
 .box form .group {
   display: block;

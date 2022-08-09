@@ -14,7 +14,7 @@
                 <li>ERC | Kigali</li>
                 <li>ERC | Kigali</li>
                 <li>ERC | Kigali</li>
-                <li>ERC | Kigali</li>
+                <li><a href="login.php" class="btn btn-link">Log In</a></li>
             </ul>
         </div>
         <div>
