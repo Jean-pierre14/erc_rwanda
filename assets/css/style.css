@@ -15,12 +15,12 @@
   --Raduis: .4rem;
   --lightBlue: rgba(104, 205, 252, 0.4);
   --White: #fff;
-  --primary: rgb(43, 144, 245);
+  --primary: #2b90f5;
   --grey: #ccc;
   --black: #000;
-  --color--red: rgb(219, 0, 0);
+  --color--red: #db0000;
   --danger: rgba(254, 105, 105, 0.601);
-  --dangerStrong: rgb(253, 75, 75);
+  --dangerStrong: #fd4b4b;
 }
 
 .img-max {
@@ -31,14 +31,14 @@
 .profil {
   width: 42px;
   height: 42px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
 }
 
 .flex {
   display: flex;
 }
+
 .flex.justify-content-between {
   justify-content: space-between;
 }
@@ -54,8 +54,9 @@
   border: 1px solid var(--grey);
   border-radius: var(--Raduis);
   background-color: var(--grey);
-  transition: all 0.3s ease;
+  transition: all .3s ease;
 }
+
 .btn.btn-link {
   background-color: transparent;
   outline: none !important;
@@ -63,42 +64,49 @@
   color: var(--White);
   font-weight: var(--fontWeightBig);
 }
+
 .btn.btn-primary {
   background-color: var(--primary);
   color: var(--White);
   border: none;
 }
+
 .btn.btn-danger {
   background-color: var(--dangerStrong);
   color: var(--White);
   border: none;
 }
+
 .btn.btn-block {
   display: block;
   width: 95%;
   margin: auto;
 }
+
 .btn:hover, .btn:focus, .btn:active {
-  opacity: 0.6;
+  opacity: .6;
 }
 
 body {
   font-family: var(--fontFamily);
   background-color: var(--lightBlue);
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
+}
+
+.padding-5 {
+  padding: 20px;
 }
 
 .group {
   margin: 10px auto;
   display: block;
 }
+
 .group label {
   display: block;
   margin: 0 0 10px 0;
 }
+
 .group .input {
   padding: 10px;
   outline: none;
@@ -115,6 +123,7 @@ body {
   padding: 20px;
   box-shadow: 0 10px 10px 0 rgba(49, 49, 49, 0.292), 0 30px 100px 0 rgba(71, 71, 71, 0.4);
 }
+
 @media (max-width: 768px) {
   .login {
     width: 80%;
@@ -127,20 +136,20 @@ body {
   position: relative;
   padding: 10px 20px;
 }
+
 .special header p,
 .special section p {
   border-bottom: 1px solid var(--grey);
   padding: 20px 0;
-  -webkit-user-select: text;
-     -moz-user-select: text;
-      -ms-user-select: text;
-          user-select: text;
+  user-select: text;
   font-size: 20px;
 }
+
 .special header p:last-child,
 .special section p:last-child {
   border: none;
 }
+
 .special button {
   margin: 10px 20px;
 }
@@ -156,22 +165,24 @@ nav {
   background-color: var(--black);
   color: var(--White);
 }
+
 nav .logo a {
   color: var(--White);
   text-decoration: none;
 }
+
 nav .links {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
+
 nav .links ul {
   list-style: none;
 }
+
 nav .links ul li {
   display: inline-block;
 }
+
 nav .links ul li a {
   padding: 10px;
   color: var(--White);
@@ -181,15 +192,18 @@ nav .links ul li a {
 .subscribes-list {
   position: relative;
 }
+
 .subscribes-list ul {
   list-style: none;
 }
+
 .subscribes-list ul li {
   cursor: pointer;
   width: 100%;
   padding: 10px 0 20px 0;
   border-bottom: 1px solid var(--grey);
 }
+
 .subscribes-list ul li:last-child {
   border: none;
 }
@@ -215,68 +229,76 @@ nav .links ul li a {
   border-radius: var(--Raduis);
   padding: 10px;
 }
+
 .box .card {
   position: relative;
   margin: 10px auto;
   width: 98%;
 }
+
 .box .card .cardHeader {
   position: relative;
   width: 100%;
   margin: auto;
 }
+
 .box .card .cardHeader .img-max {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   max-height: 450px;
-  border-radius: 0.4rem;
+  border-radius: .4rem;
 }
+
 .box .card .cardHeader .img-max:focus {
   height: auto;
 }
+
 .box .card .cardBody {
   position: relative;
   margin: 20px auto;
 }
+
 .box .card .cardBody h2 {
   opacity: 70%;
   color: var(--black);
 }
+
 .box .card .cardBody p {
   word-wrap: break-word;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   font-weight: var(--fontWeightSmall);
 }
+
 .box .card .cardFooter {
   position: relative;
   display: flex;
   justify-content: space-between;
 }
+
 .box .card .cardFooter img {
   width: 42px;
   height: 42px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 50%;
   cursor: pointer;
 }
+
 .box h3 {
   text-align: center;
   font-weight: var(--fontWeightBig);
   margin: 0 0 10px 0;
 }
+
 .box form .group {
   display: block;
   margin: 5px 0 10px 0;
 }
+
 .box form .group label {
   cursor: pointer;
   display: block;
 }
+
 .box form .group textarea,
 .box form .group .input {
   width: 100%;
@@ -285,15 +307,18 @@ nav .links ul li a {
   border: 1px solid var(--grey);
   border-radius: var(--Raduis);
 }
+
 .box form .group textarea {
   font-family: var(--fontFamily);
   font-weight: 100;
   line-height: 1;
 }
-.box form .group input[type=file] {
+
+.box form .group input[type="file"] {
   outline: none;
   border: none;
 }
+
 .box form .group button {
   padding: 8px 20px;
   outline: none;
@@ -306,10 +331,7 @@ nav .links ul li a {
 }
 
 .footer {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   width: 100%;
   padding: 100px 10px;
   color: var(--White);
@@ -317,10 +339,12 @@ nav .links ul li a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
 .footer .abonnement label {
   display: block;
   margin: 0px 0px 10px 0;
 }
+
 .footer .abonnement input {
   padding: 10px;
   width: 100%;
@@ -328,15 +352,18 @@ nav .links ul li a {
   border: 1px solid var(--grey);
   border-radius: var(--Raduis) var(--Raduis) 0 0;
 }
+
 .footer .abonnement button {
   cursor: pointer;
   padding: 5px 20px;
   border: 1px solid var(--grey);
   border-radius: 0 0 var(--Raduis) var(--Raduis);
 }
+
 .footer ul {
   list-style: none;
 }
+
 @media (max-width: 768px) {
   .footer {
     display: grid;
@@ -345,24 +372,22 @@ nav .links ul li a {
     text-align: center;
   }
   .footer input,
-.footer button {
+  .footer button {
     width: 90%;
   }
 }
 
 .wrapper {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   position: relative;
   max-width: 1440px;
   padding: 10px;
 }
+
 @media (max-width: 768px) {
   .wrapper {
     width: 90%;
     padding: 15px;
     margin: 10px auto;
   }
-}/*# sourceMappingURL=style.css.map */
+}

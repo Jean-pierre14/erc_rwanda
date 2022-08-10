@@ -8,6 +8,7 @@
                 </div>
                 <div class="cardBody">
                     <h2>Les jeunes de Gisenyi vont visite les freres qui sont dans les prisons</h2>
+                    <h4>"Bienvenu a tous..."</h3>
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit eum voluptatum ipsam rem qui officiis obcaecati voluptatibus quae expedita id, aperiam doloremque eius excepturi, sit quaerat nulla fuga repellendus? Iusto?
                     </p>
@@ -66,8 +67,6 @@
             </div>
         </div>
     </div>
-
-    
     <?php include_once "../../includes/footer.php";?>
 </body>
 
