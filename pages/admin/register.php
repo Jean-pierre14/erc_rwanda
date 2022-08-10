@@ -43,15 +43,9 @@
                         <div class="error-text">This error</div>
                         
                         <div class="group">
-                            <label for="email">Title</label>
+                            <label for="email">Email</label>
                             <input type="email" id="email" name="email" placeholder="email" class="input">
                         </div>
-                        
-                        <div class="group">
-                            <label for="img">Image</label>
-                            <input type="file" name="img" id="img">
-                        </div>
-
                         <div class="group">
                             <button type="button" class="registerAdmin">Register <i class="fa fa-send"></i></button>
                         </div>

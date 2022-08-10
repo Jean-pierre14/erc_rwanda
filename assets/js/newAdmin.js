@@ -1,4 +1,5 @@
 const form = document.querySelector(".myForm"),
+    errorText = document.querySelector(".error-text"),
     buttonSubmit = document.querySelector(".registerAdmin");
 
 form.onsubmit = (e) => {
@@ -9,9 +10,10 @@ buttonSubmit.onclick = () => {
     // Start Ajax
     let xhr = new XMLHttpRequest();
 
-    xhr.open("POST", "./backend/newAdmin.php", true);
+    xhr.open("POST", "../../backend/newAdmin.php", true);
 
     xhr.onload = () => {
+
         if (xhr.readyState === XMLHttpRequest.DONE) {
             if (xhr.status === 200) {
                 let data = xhr.response;
@@ -23,6 +25,7 @@ buttonSubmit.onclick = () => {
                 }
             }
         }
+
     }
 
     let formDate = new FormData(form);
