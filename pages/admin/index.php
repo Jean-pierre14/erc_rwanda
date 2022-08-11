@@ -1,6 +1,6 @@
 <?php include_once "./includes/header.php";?>
 <?php include_once "./includes/navbar.php";?>
-    <div class="wrapper" id="news">
+    <div class="wrapper news-list">
         <div class="box">
             <div class="card">
                 <div class="cardHeader">
@@ -68,6 +68,7 @@
         </div>
     </div>
     <?php include_once "../../includes/footer.php";?>
+    <script src="../../assets/js/Fetch.admin.js"></script>
 </body>
 
 </html>

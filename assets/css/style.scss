@@ -6,23 +6,21 @@
     box-sizing: border-box;
 }
 
-:root {
-    --fontfamily: "poppins", sans-serif;
-    --fontSize: 15px;
-    --fontWeightBig: 600;
-    --fontWeightMd: 500;
-    --fontWeightSmall: 400;
-    --Raduis: .4rem;
-    --lightBlue: rgba(104, 205, 252, 0.4);
-    --White: #fff;
-    --primary: rgb(43, 144, 245);
-    --grey: #ccc;
-    --black: #000;
-    --color--red: rgb(219, 0, 0);
-    --danger: rgba(254, 105, 105, 0.601);
-    --dangerStrong: rgb(253, 75, 75);
-}
-
+$fontFamily: "Poppins",
+sans-serif;
+$fontSize: 15px;
+$fontWeightBig: 600;
+$fontWeightMd: 500;
+$fontWeightSmall: 400;
+$Raduis: .4rem;
+$lightBlue: rgba(104, 205, 252, 0.4);
+$White: #fff;
+$primary: rgb(43, 144, 245);
+$grey: #ccc;
+$black: #000;
+$colorRed: rgb(219, 0, 0);
+$danger: rgba(254, 105, 105, 0.601);
+$dangerStrong: rgb(253, 75, 75);
 .img-max {
     position: relative;
     width: 100%;
@@ -50,25 +48,26 @@
     padding: 8px 15px;
     text-decoration: none;
     cursor: pointer;
-    border: 1px solid var(--grey);
-    border-radius: var(--Raduis);
-    background-color: var(--grey);
+    border: 1px solid $grey;
+    border-radius: $Raduis;
+    background-color: $grey;
     transition: all .3s ease;
+    font-family: $fontFamily;
     &.btn-link {
         background-color: transparent;
         outline: none !important;
         border: none !important;
-        color: var(--White);
-        font-weight: var(--fontWeightBig);
+        color: $White;
+        font-weight: $fontWeightBig;
     }
     &.btn-primary {
-        background-color: var(--primary);
-        color: var(--White);
+        background-color: $primary;
+        color: $White;
         border: none;
     }
     &.btn-danger {
-        background-color: var(--dangerStrong);
-        color: var(--White);
+        background-color: $dangerStrong;
+        color: $White;
         border: none;
     }
     &.btn-block {
@@ -84,8 +83,8 @@
 }
 
 body {
-    font-family: var(--fontFamily);
-    background-color: var(--lightBlue);
+    font-family: $fontFamily;
+    background-color: $lightBlue;
     user-select: none;
 }
 
@@ -103,8 +102,8 @@ body {
     .input {
         padding: 10px;
         outline: none;
-        border: 1px solid var(--grey);
-        border-radius: var(--Raduis);
+        border: 1px solid $grey;
+        border-radius: $Raduis;
         width: 100%;
     }
 }
@@ -112,8 +111,8 @@ body {
 .login {
     width: 70%;
     margin: 200px auto;
-    border-radius: var(--Raduis);
-    background-color: var(--White);
+    border-radius: $Raduis;
+    background-color: $White;
     padding: 20px;
     box-shadow: 0 10px 10px 0 rgba(49, 49, 49, 0.292), 0 30px 100px 0 rgba(71, 71, 71, 0.4);
     @media(max-width: 768px) {
@@ -130,7 +129,7 @@ body {
         position: relative;
         padding: 10px 20px;
         p {
-            border-bottom: 1px solid var(--grey);
+            border-bottom: 1px solid $grey;
             padding: 20px 0;
             user-select: text;
             font-size: 20px;
@@ -152,11 +151,11 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--black);
-    color: var(--White);
+    background-color: $black;
+    color: $White;
     .logo {
         a {
-            color: var(--White);
+            color: $White;
             text-decoration: none;
         }
     }
@@ -168,7 +167,7 @@ nav {
                 display: inline-block;
                 a {
                     padding: 10px;
-                    color: var(--White);
+                    color: $White;
                     text-decoration: none;
                 }
             }
@@ -184,7 +183,7 @@ nav {
             cursor: pointer;
             width: 100%;
             padding: 10px 0 20px 0;
-            border-bottom: 1px solid var(--grey);
+            border-bottom: 1px solid $grey;
             &:last-child {
                 border: none
             }
@@ -193,18 +192,19 @@ nav {
 }
 
 .wrapper {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
 }
 
 .error-text {
+    display: none;
     padding: 8px;
     margin: 10px auto;
     text-align: center;
-    border-radius: var(--Raduis);
-    color: var(--color--red);
-    background-color: var(--danger);
-    border: 1px solid var(--dangerStrong);
+    border-radius: $Raduis;
+    color: $colorRed;
+    background-color: $danger;
+    border: 1px solid $dangerStrong;
 }
 
 .box {
@@ -232,12 +232,12 @@ nav {
             margin: 20px auto;
             h2 {
                 opacity: 70%;
-                color: var(--black);
+                color: $black;
             }
             p {
                 word-wrap: break-word;
                 user-select: none;
-                font-weight: var(--fontWeightSmall);
+                font-weight: $fontWeightSmall;
             }
         }
         .cardFooter {
@@ -255,11 +255,11 @@ nav {
     }
     h3 {
         text-align: center;
-        font-weight: var(--fontWeightBig);
+        font-weight: $fontWeightBig;
         margin: 0 0 10px 0;
     }
-    background: var(--White);
-    border-radius: var(--Raduis);
+    background: $White;
+    border-radius: $Raduis;
     padding: 10px;
     form {
         .group {
@@ -274,11 +274,11 @@ nav {
                 width: 100%;
                 padding: 10px;
                 outline: none;
-                border: 1px solid var(--grey);
-                border-radius: var(--Raduis);
+                border: 1px solid $grey;
+                border-radius: $Raduis;
             }
             textarea {
-                font-family: var(--fontFamily);
+                font-family: $fontFamily;
                 font-weight: 100;
                 line-height: 1;
             }
@@ -289,8 +289,8 @@ nav {
             button {
                 padding: 8px 20px;
                 outline: none;
-                border: 1px solid var(--grey);
-                border-radius: var(--Raduis);
+                border: 1px solid $grey;
+                border-radius: $Raduis;
             }
         }
     }
@@ -304,8 +304,8 @@ nav {
     user-select: none;
     width: 100%;
     padding: 100px 10px;
-    color: var(--White);
-    background-color: var(--black);
+    color: $White;
+    background-color: $black;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     .abonnement {
@@ -317,14 +317,14 @@ nav {
             padding: 10px;
             width: 100%;
             outline: none;
-            border: 1px solid var(--grey);
-            border-radius: var(--Raduis) var(--Raduis) 0 0;
+            border: 1px solid $grey;
+            border-radius: $Raduis $Raduis 0 0;
         }
         button {
             cursor: pointer;
             padding: 5px 20px;
-            border: 1px solid var(--grey);
-            border-radius: 0 0 var(--Raduis) var(--Raduis);
+            border: 1px solid $grey;
+            border-radius: 0 0 $Raduis $Raduis;
         }
     }
     ul {
@@ -357,3 +357,5 @@ nav {
         }
     }
 }
+
+@import 'utilities';

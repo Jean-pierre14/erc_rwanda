@@ -11,31 +11,64 @@
         </div>
         <?php if(isset($_GET['event'])):?>
             <?php if($_GET['event'] == 'post'):?>
+                <?php
+                    include_once "../../backend/config.php";
+                    $get = '';
+                    $img = '';
+                    $title = '';
+                    $subtitle = '';
+                    $message = '';
+                    $button = '<button type="button" class="btn newPost">Send <i class="fa fa-send"></i></button>';
+
+                    if(isset($_GET['get'])){
+                        $get = $_GET['get'];
+                        
+                        $sql = mysqli_query($con, "SELECT * FROM news WHERE news_id = {$get}");
+
+                        if(mysqli_num_rows($sql) == 1){
+                            $row = mysqli_fetch_assoc($sql);
+                            $title = $row['title'];
+                            $subtitle = $row['subtitle'];
+                            $message = $row['content'];
+                            $img = $row['img'];
+
+                            $button = '<button type="button" class="btn update">Update <i class="fa fa-send"></i></button>';
+
+                        }else{
+                            print '<p class="alert alert-anger">Something went wrong...</p>';
+                            $button = '<button type="button" class="disable btn update">You can\'t Update <i class="fa fa-send"></i></button>';
+                        }
+                    }
+                    ?>
                 <div class="box">
                     <h3>News</h3>
                     <form action="#" class="myForm">
                         <div class="error-text">This error</div>
                         <div class="group">
                             <label for="title">Title</label>
-                            <input type="text" id="title" name="title" placeholder="Title" class="input">
+                            <input type="text" id="title" value="<?= $title;?>" name="title" placeholder="Title" class="input">
                         </div>
                         <div class="group">
                             <label for="sub-title">Sub-Title</label>
-                            <input type="text" name="title" id="sub-title" placeholder="Title" class="input">
+                            <input type="text" value="<?= $subtitle;?>" name="sub-title" id="sub-title" placeholder="Title" class="input">
                         </div>
                         <div class="group">
                             <label for="content">Content</label>
-                            <textarea name="content" id="content" class="textarea" placeholder="Message..."></textarea>
+                            <textarea name="content" value="<?= $message;?>" id="content" class="textarea" placeholder="Message..."></textarea>
                         </div>
+                        
                         <div class="group">
+                            <img src="../../assets/img/Posts/<?= $img;?>" alt="" class="avatar-mx">
                             <label for="img">Image</label>
                             <input type="file" name="img" id="img">
                         </div>
+
                         <div class="group">
-                            <button>Send <i class="fa fa-send"></i></button>
+                            <?= $button;?>
                         </div>
                     </form>
                 </div>
+                <script src="../../assets/js/newPost.js"></script>
             <?php elseif($_GET['event'] == 'admin'):?>
                 <div class="box">
                     <h3>New Admin</h3>
@@ -51,6 +84,7 @@
                         </div>
                     </form>
                 </div>
+                <script src="../../assets/js/newAdmin.js"></script>
             
                     <?php endif;?>
         <?php else:?>
@@ -63,4 +97,3 @@
         <?php endif;?>
     </div>
 
-<script src="../../assets/js/newAdmin.js"></script>
