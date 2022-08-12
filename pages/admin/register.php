@@ -18,19 +18,23 @@
                     $title = '';
                     $subtitle = '';
                     $message = '';
+                    $photo = '';
                     $button = '<button type="button" class="btn newPost">Send <i class="fa fa-send"></i></button>';
 
                     if(isset($_GET['get'])){
                         $get = $_GET['get'];
                         
                         $sql = mysqli_query($con, "SELECT * FROM news WHERE news_id = {$get}");
-
+                        
                         if(mysqli_num_rows($sql) == 1){
+
                             $row = mysqli_fetch_assoc($sql);
                             $title = $row['title'];
                             $subtitle = $row['subtitle'];
                             $message = $row['content'];
                             $img = $row['img'];
+
+                            $photo = '<img src="../../assets/img/Posts/'.$img.'" alt="" class="avatar-mx">';
 
                             $button = '<button type="button" class="btn update">Update <i class="fa fa-send"></i></button>';
 
@@ -58,7 +62,7 @@
                         </div>
                         
                         <div class="group">
-                            <img src="../../assets/img/Posts/<?= $img;?>" alt="" class="avatar-mx">
+                            <?= $photo;?>
                             <label for="img">Image</label>
                             <input type="file" name="img" id="img">
                         </div>
