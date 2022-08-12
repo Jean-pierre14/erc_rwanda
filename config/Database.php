@@ -2,8 +2,8 @@
     class Database{
         // DB params
         private $host = "localhost";
-        private $db_name = "erc_db";
-        private $username = "roor";
+        private $db_name = "erc_tb";
+        private $username = "root";
         private $password = "";
         private $con;
 
